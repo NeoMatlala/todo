@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple TO-DO App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Manage</h1>
+        </div>
+
+        <div class="input-wrap">
+            <input type="text" placeholder="Add new item" id="item">
+            <button id="submit">Add</button>
+        </div>
+
+        <div class="items-container">
+            <p>You have <span id="list-count"></span> items on your list today</p>
+
+            <ul class="item-list">
+                <li class="item"> Laundry <span class="delete">remove</span></li>
+                <li class="item"> Dinner date @ 21:00 <span class="delete">remove</span></li>
+                <li class="item"> Client meeting @ 10:00 <span class="delete">remove</span></li>
+                <li class="item"> Grocery Apartment <span class="delete">remove</span></li>
+                <li class="item"> Learn code <span class="delete">remove</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

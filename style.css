@@ -103,3 +103,39 @@ body {
 }
 
 /* mobile media queries */
+
+@media screen and (max-width: 960px) {
+    /* .container{
+        background-color: green;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 90%;
+        max-width: 90%;
+        margin-top: 5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #header {
+        padding: .5rem;
+    }
+    
+    #header h1{
+        font-weight: 600;
+    }
+
+    .input-wrap{
+        margin-top: 1rem;
+    }
+
+    .items-container{
+        margin-top: 2.5rem;
+    }
+
+    .items-container p{
+        font-size: 14px;
+    }
+}

@@ -71,8 +71,19 @@ body {
     border-radius: 15%;
 }
 
+.error{
+    border: 2px solid #CF0A0A;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 600;
+    color: #CF0A0A;
+    display: none;
+}
+
 .items-container{
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .items-container p{
@@ -137,5 +148,19 @@ body {
 
     .items-container p{
         font-size: 14px;
+    }
+
+    .input-wrap button{
+        width: 20%;
+        background-color: transparent;
+        color: #DC5F00;
+        border: none;
+        font-family: inherit;
+        font-size: 1rem;
+    }
+    
+    .input-wrap button:hover{
+        padding: .6rem 0;
+        border-radius: 10px;
     }
 }

@@ -1,4 +1,3 @@
-// add items to list
 var newItem = document.querySelector('#item')
 var submitButton = document.querySelector('#submit')
 var itemList = document.querySelector('.item-list')
@@ -8,23 +7,34 @@ var listCount = document.querySelector('#list-count')
 var count = itemList.childElementCount
 listCount.innerHTML = `${count}`
 
+// error message: entering empty todo
+var displayError = document.querySelector('.error')
+
+// add items to list
 submitButton.addEventListener('click', addNewItem)
 
 function addNewItem() {
-    var li = document.createElement('li')
-    var removeSpan = document.createElement('span')
+    console.log(newItem.value.length)
 
-    li.classList = 'item'
-    li.innerText = newItem.value
+    if(newItem.value.length === 0) {
+        displayError.style.display = 'block'
+    } else {
+        displayError.style.display = 'none'
+        var li = document.createElement('li')
+        var removeSpan = document.createElement('span')
 
-    removeSpan.innerText = 'remove'
-    removeSpan.className = 'delete'
+        li.classList = 'item'
+        li.innerText = newItem.value
 
-    li.appendChild(removeSpan)
-    itemList.appendChild(li)
+        removeSpan.innerText = 'remove'
+        removeSpan.className = 'delete'
 
-    count++
-    listCount.innerHTML = `${count}`
+        li.appendChild(removeSpan)
+        itemList.appendChild(li)
+
+        count++
+        listCount.innerHTML = `${count}`
+    }
 }
 
 // remove item
@@ -38,6 +48,4 @@ function removeItem(e) {
         listCount.innerHTML = `${count}`
     }
 }
-
-
 
